@@ -1,0 +1,5 @@
+dimension,mi_nonnegative,cmi_nonnegative,samplewise_nonnegative,conditional_selection_supersamples,conditional_evaluation_supersamples,conditional_proxy_candidate_count,parameter_profile_selection_repeats,parameter_profile_evaluation_repeats,parameter_mi_repeats,theorem1_proxy_selection_repeats,theorem1_proxy_evaluation_repeats,theorem1_proxy_candidate_count_mean,mean_samplewise_mi
+1.0,True,True,True,10.0,10.0,96.0,4.0,4.0,4.0,4.0,4.0,226.0,0.5578149016358454
+2.0,True,True,True,10.0,10.0,96.0,4.0,4.0,4.0,4.0,4.0,226.0,0.4857923565902459
+5.0,True,True,True,10.0,10.0,96.0,4.0,4.0,4.0,4.0,4.0,226.0,0.37611792554637935
+10.0,True,True,True,10.0,10.0,96.0,4.0,4.0,4.0,4.0,4.0,226.0,0.2881543742366498

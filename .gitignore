@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.pyc
+.mplconfig/
+.ipynb_checkpoints/
+
+# Generated exports; paper PDFs are kept in figures/.
+/figures/*.eps
+/V_alpha/figures/
+/BLR/outputs/*.eps
+/canonical_channels/paper_figures/*
+!/canonical_channels/paper_figures/Canonical-channels-1x3.pdf
+!/canonical_channels/paper_figures/Trade-off.pdf
+!/canonical_channels/paper_figures/channel_curves.npz

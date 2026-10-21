@@ -1,0 +1,5 @@
+.venv/
+data/
+results/**
+!results/*/
+!results/*/results.pkl

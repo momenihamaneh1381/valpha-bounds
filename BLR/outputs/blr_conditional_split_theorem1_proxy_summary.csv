@@ -1,0 +1,5 @@
+dimension,candidate_count_mean,candidate_count_stderr,candidate_sources_last_repeat_json,selected_alpha,selected_bound,selected_bound_stderr,selected_sensitivity_mean,selected_sensitivity_stderr
+1.0,226.0,0.0,"{""marginal_sample"": 128, ""posterior_mean"": 64, ""prior_sample"": 32, ""w_true"": 1, ""zero"": 1}",1.8,0.1414708492570122,0.003996409335451938,0.18018979241300226,0.00031333386936296503
+2.0,226.0,0.0,"{""marginal_sample"": 128, ""posterior_mean"": 64, ""prior_sample"": 32, ""w_true"": 1, ""zero"": 1}",1.6,0.21888255503055581,0.005141886925894492,0.193033824735697,0.002188639185818868
+5.0,226.0,0.0,"{""marginal_sample"": 128, ""posterior_mean"": 64, ""prior_sample"": 32, ""w_true"": 1, ""zero"": 1}",1.35,0.43021159485530125,0.005937334544792733,0.2277543911200413,0.0012518444592334445
+10.0,226.0,0.0,"{""marginal_sample"": 128, ""posterior_mean"": 64, ""prior_sample"": 32, ""w_true"": 1, ""zero"": 1}",1.25,0.7856039112514248,0.131032139647053,0.2601455347360977,0.005876681054663736

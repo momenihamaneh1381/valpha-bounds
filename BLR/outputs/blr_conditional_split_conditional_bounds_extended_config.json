@@ -1,0 +1,149 @@
+{
+  "added_curves": {
+    "corollary1_parameter_v_alpha": "Pure Corollary 2 / subgaussian, split-selected over alpha",
+    "fixed_parameter_v2": "Theorem 2 / variance bound at alpha=2",
+    "mi_bound": "Parameter-space MI bound using corrected marginal mixture",
+    "proxy_theorem1_v_alpha": "Theorem 1 finite-candidate sensitivity proxy, split-selected over alpha",
+    "rigorous_parameter_v_alpha": "Corollary 2 / subgaussian, split-selected over alpha"
+  },
+  "cached_result_corrections": [
+    {
+      "correction": "CMI supersample loss prefactor",
+      "date": "2026-10-20",
+      "method": "Algebraic correction from archived CMI information estimates; no new Monte Carlo samples.",
+      "multiplicative_factor": 2.0,
+      "other_result_columns_unchanged": true,
+      "updated_columns": [
+        "cmi_bound",
+        "cmi_bound_stderr"
+      ]
+    }
+  ],
+  "config": {
+    "alpha_values": [
+      1.05,
+      1.1,
+      1.15,
+      1.2,
+      1.25,
+      1.3,
+      1.35,
+      1.4,
+      1.45,
+      1.5,
+      1.55,
+      1.6,
+      1.65,
+      1.7,
+      1.75,
+      1.8,
+      1.85,
+      1.9,
+      1.95,
+      2.0,
+      2.05,
+      2.1,
+      2.15,
+      2.2,
+      2.25,
+      2.3,
+      2.35,
+      2.4,
+      2.45,
+      2.5,
+      2.55,
+      2.6,
+      2.65,
+      2.7,
+      2.75,
+      2.8,
+      2.85,
+      2.9,
+      2.95,
+      3.0
+    ],
+    "artifact_prefix": "blr_conditional_split",
+    "clip_c": 4.0,
+    "dimensions": [
+      1,
+      2,
+      5,
+      10
+    ],
+    "lambda_prior": 2.0,
+    "n": 100,
+    "num_datasets": 256,
+    "num_holdout": 10000,
+    "num_marginal_components": 32,
+    "num_mi_weight_samples": 6,
+    "num_reference_datasets": 256,
+    "num_supersamples": 20,
+    "num_u_samples": 24,
+    "num_weight_samples": 384,
+    "output_dir": "outputs",
+    "output_num_weight_samples": 384,
+    "output_test_size_max": 4,
+    "proxy_num_marginal_samples": 64,
+    "proxy_num_means": 32,
+    "samplewise_num_bins": 12,
+    "samplewise_num_weight_samples": 2,
+    "seed": 20260419,
+    "sigma_noise_sq": 0.16,
+    "w_true_value": 0.8
+  },
+  "information_bound_formulas": {
+    "cmi_bound": "clip_c * sqrt(2 * I(W;U | supersample) / n)",
+    "cmi_loss_difference_subgaussian_proxy": "clip_c**2",
+    "information_units": "nats (natural logarithms)",
+    "mi_bound": "clip_c * sqrt(I(W;S) / (2*n))"
+  },
+  "legacy_identifier_note": "corollary1_* identifiers refer to the current paper Corollary 2; names are retained for compatibility.",
+  "option_1_uncertainty_bands": {
+    "alpha_dependent_curves": [
+      "rigorous_conditional_v_alpha",
+      "proxy_conditional_v_alpha",
+      "rigorous_parameter_v_alpha",
+      "corollary1_parameter_v_alpha",
+      "proxy_theorem1_v_alpha"
+    ],
+    "description": "For alpha-dependent optimized bounds, alpha is selected on an independent selection pool and evaluated on an independent evaluation pool. Error bands are computed only on the evaluation pool at the selected alpha."
+  },
+  "package_versions": {
+    "matplotlib": "3.10.8",
+    "nbclient": "0.10.4",
+    "nbformat": "5.10.4",
+    "numpy": "2.4.4",
+    "pandas": "3.0.2",
+    "python": "3.12.3",
+    "scipy": "1.17.1",
+    "torch": "2.11.0",
+    "torchvision": "0.26.0"
+  },
+  "paper_corollary_number": 2,
+  "split_selection": {
+    "conditional_evaluation_supersamples": 10,
+    "conditional_selection_supersamples": 10,
+    "parameter_profile_evaluation_repeats": 4,
+    "parameter_profile_selection_repeats": 4,
+    "theorem1_proxy_evaluation_repeats": 4,
+    "theorem1_proxy_selection_repeats": 4
+  },
+  "theorem1_proxy_candidate_budget": {
+    "anchors": 2,
+    "candidate_batch_size": 256,
+    "marginal_samples": 128,
+    "posterior_means": 64,
+    "prior_samples": 32
+  },
+  "uncertainty": {
+    "cmi": "standard error across supersample CMI estimates with delta-method bound transform",
+    "conditional_v_alpha": "standard error on independent evaluation supersamples at split-selected alpha",
+    "corollary1_parameter_v_alpha": "standard error on independent evaluation repeats at split-selected alpha",
+    "empirical_generalization": "sample standard error across datasets",
+    "fixed_v2": "standard error across evaluation V_alpha MC estimates at alpha=2",
+    "mi": "standard error across repeated independent MI MC estimates",
+    "proxy_theorem1_v_alpha": "standard error on independent evaluation proxy repeats at split-selected alpha",
+    "rigorous_parameter_v_alpha": "standard error on independent evaluation repeats at split-selected alpha"
+  },
+  "warning": "Theorem-1 proxy uses a finite candidate maximum and is not a theorem-valid global supremum unless externally certified."
+}
